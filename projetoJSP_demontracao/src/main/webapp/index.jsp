@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>teste</title>
+<title>Projeto JSP</title>
 </head>
 <body>
-	<h1>Teste de página JSP</h1>
+	<h1>Página JSP</h1>
 	
-	<h1>Teste de página JSP</h1>
+	
 </body>
 </html>
