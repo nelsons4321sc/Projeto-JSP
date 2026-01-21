@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-
+/*Chamando o controller ou ServletController*/
 @WebServlet(urlPatterns = {"/principal/ServletLogin", "/ServletLogin"}) /*Mapeamento de URL que vem da tela*/
 public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
