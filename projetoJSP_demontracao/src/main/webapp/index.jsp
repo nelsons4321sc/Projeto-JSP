@@ -8,7 +8,11 @@
 </head>
 <body>
 	<h1>Página JSP</h1>
-	<h1>Página JSP</h1>
+<%
+	out.print("teste do jsp");
+%>
+
+<form action="post"></form>
 	
 </body>
 </html>
