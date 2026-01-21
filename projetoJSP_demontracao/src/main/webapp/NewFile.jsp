@@ -7,6 +7,6 @@
 <title>teste</title>
 </head>
 <body>
-	<h1>TEste de página JSP</h1>
+	<h1>Teste de página JSP</h1>
 </body>
 </html>
