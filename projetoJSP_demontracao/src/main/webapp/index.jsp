@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Página JSP</h1>
-	
+	<h1>Página JSP</h1>
 	
 </body>
 </html>
