@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.ModelLogin;
+
 
 
 
@@ -42,7 +44,40 @@ public class ServletLogin extends HttpServlet {
 	// Recebe os dados enviados por um formulário	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-	
+		String login = request.getParameter("login");
+		String senha = request.getParameter("senha");
+		String url = request.getParameter("url");
+		
+		
+		if (login != null && !login.isEmpty() && senha != null && !senha.isEmpty()) {
+			
+			ModelLogin modelLogin = new ModelLogin();
+			modelLogin.setLogin(login);
+			modelLogin.setSenha(senha);
+			
+			if (modelLogin.getLogin().equals("admin") 
+					&& modelLogin.getSenha().equals("admin")) {/*Deu certo o  login*/
+				
+				request.getSession().setAttribute("usuario", modelLogin);/*Coloca o user na sessao*/
+				
+				if (url == null || url.equals("null")) {
+					url = "principal/principal.jsp";
+				}
+				RequestDispatcher redirecionar = request.getRequestDispatcher(url);
+				redirecionar.forward(request, response);
+				
+			}else {
+				RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
+				request.setAttribute("msg", "Informe o login e senha corretamente!");
+				redirecionar.forward(request, response);
+			}
+			
+		}else {
+			RequestDispatcher redirecionar = request.getRequestDispatcher("index.jsp");
+			request.setAttribute("msg", "Informe o login e senha corretamente!");
+			redirecionar.forward(request, response);
+		}
+
 		
 	}
 }
