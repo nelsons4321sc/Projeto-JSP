@@ -28,6 +28,7 @@ public class ServletLogin extends HttpServlet {
     //Recebe a url dos parametros	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// para deletar e consultar
+		/*
 		String acao = request.getParameter("acao");
 		
 		if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("logout")) {
@@ -38,6 +39,7 @@ public class ServletLogin extends HttpServlet {
 		
 		doPost(request, response);
 		}
+		*/
 	}
 	
 	
