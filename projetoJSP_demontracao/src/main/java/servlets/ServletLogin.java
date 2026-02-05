@@ -30,16 +30,7 @@ public class ServletLogin extends HttpServlet {
 		// para deletar e consultar
 		
 		String acao = request.getParameter("acao");
-		/*
-		if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("logout")) {
-			request.getSession().invalidate(); // invalida a sessão e retorna para o login, como não existe
-			RequestDispatcher redirecionar = request.getRequestDispatcher("index.jsp");
-			redirecionar.forward(request, response);
-		} else {
-		
-		doPost(request, response);
-		}
-		*/
+	
 	}
 	
 	
