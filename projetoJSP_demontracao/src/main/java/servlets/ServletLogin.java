@@ -48,8 +48,8 @@ public class ServletLogin extends HttpServlet {
 			modelLogin.setLogin(login);
 			modelLogin.setSenha(senha);
 			
-			if (modelLogin.getLogin().equals("admin") 
-					&& modelLogin.getSenha().equals("admin")) {/*Deu certo o  login*/
+			if (modelLogin.getLogin().equals("adm") 
+					&& modelLogin.getSenha().equals("adm")) {/*Deu certo o  login*/
 				
 				request.getSession().setAttribute("usuario", modelLogin);/*Coloca o user na sessao*/
 				
